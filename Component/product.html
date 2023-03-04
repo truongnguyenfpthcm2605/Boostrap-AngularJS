@@ -1,0 +1,38 @@
+<div class="controller" style="height: 500px;">
+    <div class="col-md-12 slide" style="width: 100%;" ng-include="'../Component/Slider.html'"></div>
+   
+</div>
+<div class="row product" ng-controller="productCtrl">
+    <div style="margin: 10px auto 10px auto; display: flex; justify-content: space-between;">
+        <select class="btn btn-dark type" ng-model="apple" ng-options="x for x in apples ">
+        </select>
+        <select class="btn btn-dark type" ng-model="chose" ng-options="x for x in choose ">
+        </select>
+        <button class="btn btn-info" ng-click="sort()">Lọc Dữ Liệu</button>
+        <form class="form-inline " style="margin-left: 20px;">
+            <input class="form-control mr-sm-2" ng-model="s" type="search" placeholder="Search" aria-label="Search">
+            <button ng-disabled="!s.length > 0" class="btn btn-dark my-2 my-sm-0" ng-click="search()">Search</button>
+        </form>
+    </div>
+    <div class="container " style="margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: flex-start;">
+        <div class="card pro" style="width: 22%; height: auto;"
+            ng-repeat="p in sp  | orderBy : sx | limitTo : amout : begin | filter : {name : find } : false">
+            <img src="../img/Imgproduct/{{p.img}}" class=" pro-img-top" alt="...">
+            <div class="card-body">
+                <h5>{{p.name}}</h5>
+                <h6>{{p.price | currency : "" }} VND </h6>
+                <P>{{p.discount | currency : "" }} VND </P>
+                <div style="display: flex; justify-content: space-around;">
+                    <button class="btn btn-light btn-small">{{p.rom}} GB</button>
+                    <button class="btn btn-light btn-small "> <i class='bx bxs-battery'></i>{{p.pin}} mAh</button>
+                </div>
+                <hr>
+                <a href="#!detail/{{p}}"><i class='bx bx-show-alt'></i>Xem chi tiết sản phẩm</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="text-align: center;margin-top: 20px;">
+        <button class="btn btn-dark" ng-click="more()">{{titleMore}}</button>
+    </div>
+
+</div>

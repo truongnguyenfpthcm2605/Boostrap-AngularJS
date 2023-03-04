@@ -1,0 +1,212 @@
+<div class="row" style="width: 80%; margin: 0 auto;" ng-controller="detailCtrl">
+        <div class="container-fluid" style="margin-top: 10px;">
+                <h1 style="text-align: center;">THÔNG TIN SẢN PHẨM</h1>
+                <div class="row " style="display: flex; justify-content: space-between;">
+                        <div class="col-md-6" style="border-radius: 10px;">
+                                <img src="../img/Imgproduct/{{detailpro.img}}" style="border-radius: 10px; width: 100%;"
+                                        alt="">
+                        </div>
+                        <ul class="col-md-6 list-infor" style="list-style: none; padding-top: 60px;">
+                                <li>
+                                        <h2 style="font-weight: bold;color: #3D1766; font-size: 35px;">
+                                                {{detailpro.name}}<span style="margin-left: 5px;"
+                                                        class="badge text-bg-danger">
+                                        </h2>
+                                </li>
+                                <li>Rom : {{detailpro.rom}} GB</li>
+                                <li>Pin : {{detailpro.pin}} mAh</li>
+                                <li style="color: red; font-size: 20px;">Giá :{{detailpro.price | currency : ""}} VND
+                                </li>
+                                <li style="color: red; font-size: 15px;text-decoration: line-through; ">Giá gốc
+                                        :{{detailpro.discount | currency : ""}} VND</li>
+                        </ul>
+                </div>
+                <div class="container" style="display: flex; justify-content: space-between;">
+                        <div><button class="btn btn-light">64GB</button>
+                                <button class="btn btn-light">256GB</button>
+                                <button class="btn btn-light">512GB</button>
+                                <button class="btn btn-light">1TB</button>
+                        </div>
+                        <div>
+                                <button data-toggle="modal" data-target="{{id}}" ng-click="userCheck()" type="button"
+                                        class="btn btn-success"><span><i class='bx bx-cart-add'></i></span> Thêm Vào Giỏ
+                                        Hàng</button>
+                        </div>
+                </div>
+                <div class="cotainer">
+                        <h2 style="font-size: 20px; font-weight: bold; margin:10px 0 10px 0;">Hình ảnh Liên Quan</h2>
+                        <div class="img-thum" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                                <img src="../img/thumnail/iphone-14-pro-061222-050549.jpg" width="22%" alt="...">
+                                <img src="../img/thumnail/iphone-14-pro-061222-050551.jpg" width="22%">
+                                <img src="../img/thumnail/iphone-14-pro-061222-050553.jpg" width="22%">
+                                <img src="../img/thumnail/iphone-14-pro-061222-050554.jpg" width="22%">
+                        </div>
+                </div>
+                
+                <h2 style="font-size: 20px; font-weight: bold; margin:10px 0 10px 0">Sản Phẩm Tương Tự</h2>
+                <div class="row">
+
+                        <div class="card carts  col-md-3" style="width: 100%; height: 368px; margin: 5px;">
+                                <!-- ng-repeat="p in recomend() | limitTo : 3 : 0 " -->
+                                <img src="../img/Imgproduct/iphone14.png " class="card-img-top" style="height: 190px;"
+                                        alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title">Iphone 14 Pro </h5>
+                                        <p class="card-text">{{ 339900000 | currency : ""}} VND</p>
+                                        <a href="" class="btn btn-dark position-relative">Xem Chi Tiết
+                                        </a>
+                                </div>
+                        </div>
+                        <div class="card carts  col-md-3" style="width: 100%; height: 368px; margin: 5px;">
+
+                                <img src="../img/Imgproduct/iphone14.png " class="card-img-top" style="height: 190px;"
+                                        alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title">Iphone 14 Pro </h5>
+                                        <p class="card-text">{{ 339900000 | currency : ""}} VND</p>
+                                        <a href="" class="btn btn-dark position-relative">Xem Chi Tiết
+                                        </a>
+                                </div>
+                        </div>
+                        <div class="card carts  col-md-3" style="width: 100%; height: 368px; margin: 5px;">
+
+                                <img src="../img/Imgproduct/iphone14.png " class="card-img-top" style="height: 190px;"
+                                        alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title">Iphone 14 Pro </h5>
+                                        <p class="card-text">{{ 339900000 | currency : ""}} VND</p>
+                                        <a href="" class="btn btn-dark position-relative">Xem Chi Tiết
+                                        </a>
+                                </div>
+                        </div>
+
+                </div>
+                <hr>
+                
+                <h2 style="font-size: 20px; font-weight: bold; margin:10px 0 10px 0">Thông Tin Thêm</h2>
+                <p>Apple Inc. is an American multinational technology company headquartered in Cupertino, California,
+                        United States. Apple is the largest technology company by revenue (totaling US$365.8 billion in
+                        2021) and, as of June 2022, is the world's biggest company by market capitalization, the
+                        fourth-largest personal computer vendor by unit sales and second-largest mobile phone
+                        manufacturer. It is one of the Big Five American information technology companies, alongside
+                        Alphabet (Google), Amazon, Meta (Facebook), and Microsoft.
+
+                        Apple was founded as Apple Computer Company on April 1, 1976, by Steve Wozniak, Steve Jobs and
+                        Ronald Wayne to develop and sell Wozniak's Apple I personal computer. It was incorporated by
+                        Jobs and Wozniak as Apple Computer, Inc. in 1977 and the company's next computer, the Apple II,
+                        became a best seller and one of the first mass-produced microcomputers. Apple went public in
+                        1980 to instant financial success. The company developed computers featuring innovative
+                        graphical user interfaces, including the 1984 original Macintosh, announced that year in a
+                        critically acclaimed advertisement. By 1985, the high cost of its products and power struggles
+                        between executives caused problems. Wozniak stepped back from Apple amicably and pursued other
+                        ventures, while Jobs resigned bitterly and founded NeXT, taking some Apple employees with him.
+                </p>
+         
+                        
+                <div class="container" style="width: 90%; margin: 0 auto;">
+                        <div class="form-group row">
+                                <form action="" name="formCmt" style="width: 100%;">
+                                        <label for="inputEmail3" class="col-sm-2 col-form-label"
+                                                style="font-size: 20px; font-weight: bold;">Phản hồi</label>
+                                        <div class="col-sm-12">
+                                                <textarea class="form-control " name="txtAddress" ng-model="cmt.content"
+                                                        cols="30" rows="5" required></textarea>
+                                                <span style="font-size: 10px; color: red;"
+                                                        ng-hide="formCmt.txtAddress.$untouched || formCmt.txtAddress.$valid">Không
+                                                        được bỏ trống
+                                                </span>
+                                        </div>
+                                        <div class="col-sm-12" style="margin: 10px 0 10px 0;">
+                                                <button type="button" class="btn btn-dark" ng-click="checkCmt()" ng-disabled="formCmt.$invalid">Gửi Phản Hồi</button>
+                                        </div>
+                                </form>
+                                
+                                <div class="container" style=" padding: 10px; ">
+
+                                        <div class="media" ng-repeat="p in comments"
+                                            style="border-radius: 20px; padding: 10px; background-color: rgba(0, 0, 0, 0.1);width: 100%; margin-bottom: 10px;display: flex; justify-content: space-between; align-items: center;">
+                                            <img src="../img/{{p.img}}" width="100px" style="margin-right: 20px; border-radius: 50%;" alt="...">
+                                            <div class="media-body">
+                                               
+                                                <h3 class="mt-0" style="font-weight: bold;">{{p.name}}</h3>
+                                                <p>{{p.content}}</p>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                        </div>
+                </div>
+                <div class="modal fade" id="by" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                        <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Nhập Thông Tin Cần</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                </button>
+                                        </div>
+                                        <div class="modal-body">
+                                                <form>
+                                                        <div class="form-group">
+                                                                <label for="exampleInputEmail1">Số Lượng</label>
+                                                                <input type="number" min="1" ng-model="quanity"
+                                                                        class="form-control"
+                                                                        placeholder="Nhập số lượng">
+
+
+                                                        </div>
+                                                        <div class="form-group row">
+                                                                <label for="inputPassword3"
+                                                                        class="col-sm-4 col-form-label">Màu Sắc
+                                                                </label>
+                                                                <div class="col-sm-12">
+                                                                        <select class="form-control" ng-model="color">
+                                                                                <option value="Trắng">Trắng</option>
+                                                                                <option value="Đen">Đen</option>
+                                                                                <option value="Xanh">Xanh</option>
+                                                                                <option value="Tím">Tím</option>
+                                                                                <option value="Vàng" selected>Vàng
+                                                                                </option>
+                                                                                <option value="Hồng">Hồng</option>
+                                                                        </select>
+                                                                </div>
+                                                        </div>
+
+
+
+                                                </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Quay Lại</button>
+                                                <a class="btn btn-success"
+                                                        href="#!cart/{{detailpro}}/{{quanity}}/{{color}}"
+                                                        onclick="$('#by').modal('hide');">Thêm Vào Giỏ</a>
+                                        </div>
+                                </div>
+                        </div>
+
+
+                </div>
+
+        </div>
+
+
+
+
+</div>
+<link rel="stylesheet" href="../style/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>

@@ -1,0 +1,57 @@
+<div ng-controller="loginCtrl">
+  <div class="container d-flex flex-wrap" style="justify-content: space-between;text-align: center;">
+    <a href="#!home" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class=" titlewep">Apple Technology&#169;</span>
+    </a>
+    <div  style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+      <img ng-hide="signin" src="../img/userdefault.jpg" alt="" style="border-radius: 50%; width: 40px;">
+      <h5 ng-hide="signin"
+        style="margin: 0 0 0 10px; font-style: italic; font-family: 'Times New Roman', Times, serif; font-weight: bold;"
+        data-toggle="modal" data-target="#exampleModal" >Đăng Nhập</h5>
+      <img ng-hide="!signin" src="../img/{{user.img}}" alt="" style="border-radius: 50%; width: 40px;">
+      <h5 ng-hide="!signin"
+        style="margin: 0 0 0 10px; font-style: italic; font-family: 'Times New Roman', Times, serif; font-weight: bold;"
+        data-toggle="modal" data-target="#exampleModal">{{user.name}}</h5>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="border-radius: 10px;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Đăng Nhập</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form name="form2">
+            <div class="form-group valid">
+              <label for="exampleInputEmail1">Tên Tài Khoản</label>
+              <input type="text"  ng-model="user.name" class="form-control" name="txtuser2" id="exampleInputEmail1" placeholder="Nhập tên tài khoản" required>
+              <span ng-hide="form2.txtuser2.$untouched || form2.txtuser2.$valid">Vui lòng nhập tên tài khoản</span>
+            </div>
+            <div class="form-group valid">
+              <label for="exampleInputPassword1">Mật Khẩu</label>
+              <input type="password" ng-model="user.pass" valid-pass2 class="form-control" name="txtpass2" id="exampleInputPassword1" placeholder="Nhập mật khẩu" required>
+              <span ng-hide="form2.txtpass2.$untouched || form2.txtpass2.$valid">Vui lòng nhập mật khẩu nhiều hơn 8 kí tự</span>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Nhớ tài khoản?</label>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-dark" ng-disabled="form2.$invalid"  data-dismiss="modal" ng-click="login()">Đăng Nhập</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

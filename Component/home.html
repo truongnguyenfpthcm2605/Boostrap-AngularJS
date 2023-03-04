@@ -1,0 +1,194 @@
+<div class="row">
+    <video class="video" src="../video/[YT2mp3.info] - Introducing Dynamic Island on iPhone 14 Pro _ Apple.mp4" muted
+        controls autoplay loop></video>
+</div>
+<div class="row" style=" margin: 0 auto 10px auto;">
+    <div class="col-md-8">
+        <div class="jumbotron">
+            <h1 class="display-6">Xin Chào Bạn</h1>
+            <p class="lead">Công nghệ được chi phối bởi hai loại người: người hiểu những gì mình không quản lý, và người
+                quản lý những gì mình không hiểu.</p>
+            <hr class="my-4">
+            <a class="btn btn-dark" href="#" role="button">Tìm Hiểu Thêm</a>
+        </div>
+    </div>
+    <div class="col-md-4 star">
+        <h4 class="display-6">Đánh Giá Chúng Tôi</h4>
+        <span>&#10032;</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <span>&#10032; &#10032;</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <span>&#10032;&#10032;&#10032;</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <span>&#10032;&#10032;&#10032;&#10032;</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <span>&#10032;&#10032;&#10032;&#10032;&#10032;</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <p style=" margin: 0 auto;">
+        <button class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">Công Nghệ</button>
+        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseExample2"
+            aria-expanded="false" aria-controls="multiCollapseExample2">Phát Triển</button>
+
+    </p>
+    <div class="row" style="width: 100%;">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    <div class="card" style="width: 100%;">
+                        <img src="../img/ai-01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Kỷ Nguyên Trí Tuệ Nhân Tạo</h5>
+                            <p class="card-text">ChatGPT, viết tắt của Chat Generative Pre-training Transformer, là một
+                                chatbot do công ty OpenAI của Mỹ phát triển và ra mắt vào tháng 11 năm 2022. ChatGPT
+                                được xây dựng dựa trên GPT-3.5 - một dòng mô hình ngôn ngữ lớn của OpenAI đồng thời được
+                                tinh chỉnh bằng cả hai kỹ thuật học tăng cường lẫn học có giám sát. Wikipedia</p>
+                            <a href="https://vi.wikipedia.org/wiki/ChatGPT">Wikipedia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                    <div id="carouselExampleIndicators" style="margin-top: 10px;
+                    " class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="../img/ImgAI/anh2.png" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../img/ImgAI/anh1.png" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../img/ImgAI/anh3.png" alt="Third slide">
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row forms" ng-controller="registerCtrl" style=" width: 60%; margin: 0 auto; margin-top: 20px;">
+    <h3 style="margin:  0 auto; padding: 10px; font-weight: bold;" >Đăng Ký</h3>  
+  <form class="w-100 valid" name="form1">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Tài Khoản</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="txtUser" ng-model="person.user"  required>
+            <span ng-hide="form1.txtUser.$untouched || form1.txtUser.$valid">Vui lòng nhập tài khoản</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Mật Khẩu</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" name="txtPass" valid-pass ng-model="person.pass" required >
+            <span ng-hide="form1.txtPass.$untouched || form1.txtPass.$valid">Vui lòng nhập mật khẩu nhiều hơn 8 kí tự</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Họ Và Tên</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control"  name="txtFullname" ng-model="person.fullname"  required>
+            <span ng-hide="form1.txtFullname.$untouched || form1.txtFullname.$valid">Vui lòng nhập họ và tên</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="txtEmail" ng-model="person.email" required >
+            <span ng-hide="form1.txtEmail.$untouched || form1.txtEmail.$valid">Nhập sai định dang email</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Điện Thoại</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" pattern="((09|03|07|08|05)+([0-9]{8})\b)"  name="txtPhone" number-hone ng-model="person.phone" required  >
+            <span ng-hide="form1.txtPhone.$untouched || form1.txtPhone.$valid">Nhập sai định dang số điện thoại</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Ngày Sinh</label>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" name="txtBirth" ng-model="person.birth" required>
+            <span ng-hide="form1.txtBirth.$untouched || form1.txtBirth.$valid">Vui lòng chọn ngày sinh</span>
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Giới Tính</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="option1" ng-model="person.gender">
+                <label class="form-check-label" for="gridRadios1">
+                  Nam
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio"  value="option2" ng-model="person.gender">
+                <label class="form-check-label" for="gridRadios2">
+                  Nữ
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Best Brand</label>
+          <div class="col-sm-10">
+            <select class="form-control"  ng-model="person.hobby" ng-options="x for x in brand ">
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Địa Chỉ</label>
+            <div class="col-sm-10">
+              <textarea class="form-control " valid-address  name="txtAddress"  ng-model="person.address" cols="30" rows="5" required></textarea>
+              <span ng-hide="form1.txtAddress.$untouched || form1.txtAddress.$valid">Vui lòng nhập địa chỉ lớn hơn 10 kí tự và nhỏ hơn 50 kí tự</span>
+            </div>
+          </div>
+        <div class="form-group row">
+          
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" ng-model="person.check" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+               <a href="https://tgpl.moj.gov.vn/Pages/hoi-nhap-phat-trien.aspx?ItemID=1888&l=Nghiencuutraodoi">Đồng ý với chính sách của chúng tôi</a>
+              </label>
+            </div>
+          </div>
+        </div>
+        <h1 ng-show="form1.$valid" >Chuc Mừng</h1>
+        <div class="form-group row">
+          <div class="col-sm-10" >
+            <button type="button" ng-disabled="form1.$invalid " ng-click="register()" class="btn btn-dark ">Đăng Ký</button>
+          </div>
+        </div>
+      </form>
+</div>

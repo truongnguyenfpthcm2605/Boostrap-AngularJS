@@ -1,0 +1,50 @@
+<div class="container" ng-controller="billCtrl">
+  <div class="container"
+    style="padding: 20px 20px 150px 20px; height: auto; border: 1px solid black; border-radius: 10px;">
+    <h1 style="text-align: center; font-weight: bold;">Hóa Đơn</h1>
+    <h4>Apple Technology&#169;</h4>
+    <ul class="nav flex-column">
+      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Hotline : 023478472</a></li>
+      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Địa Chỉ : 22 Nguyen Van Qua Street , Q12, TP
+          HCM</a></li>
+      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Email : nvttechnology@gmail.com</a></li>
+      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Địa Chỉ Giao Hàng : Công viên phần mềm, Toà
+          nhà Innovation lô 24, Quang Trung, Quận 12, Thành phố Hồ Chí Minh, Vietnam </a></li>
+      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Số điện thoại người nhận : 0374379249</a>
+      </li>
+    </ul>
+    <hr>
+    <h3>Sản Phẩm Hóa Đơn</h3>
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Tên Sản Phẩm</th>
+            <th scope="col">Giá Tiền</th>
+            <th scope="col">Màu Sắc</th>
+            <th scope="col">Số Lượng</th>
+            <th scope="col">Thành Tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="p in billsp">
+            <th scope="row">{{p.name}}</th>
+            <td>{{p.price | currency : ""}} VND</td>
+            <td>{{p.color}}</td>
+            <td>{{p.quanity}}</td>
+            <td>{{p.price*p.quanity | currency : ""}} VND</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+    <hr>
+    <h5>Tổng Tiền Của Bạn Là : {{total | currency : ""}} VND</h5>
+    <h2 style="text-align: center;">Xin cảm ơn ,vì đã ủng hộ chung tôi!</h2>
+  </div>
+  <div style="margin-top: 10px; display: flex; justify-content: end;">
+    <button class="btn btn-dark" ng-click="add()">Thanh Toán</button>
+  </div>
+</div>
